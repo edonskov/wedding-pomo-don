@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/landing.css}"/>
+
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">-->
+</head>
+<body>
+<header>
+    <div id="hero-text">
+        <h1>Отправляйтесь с нами!</h1>
+    </div>
+    <div class="particle particle-1"> </div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div id="scroll"></div>
+</header>
+<div id="content">
+    <section class="info">
+        <p>Помогалова Альбина и Донсков Евгений</p>
+        <p>Приглашают Вас отпраздновать любовное путешествие...</p>
+        <p>(Please stand by)</p>
+    </section>
+    <section class="transparent-text">
+        <img th:src="@{heart2.png}"/>
+    </section>
+    <section class="info">
+        <p>ДАТА: 15.10.2021</p>
+        <p>МЕСТО: </p>
+        <p>(Please stand by)</p>
+    </section>
+    <section class="container">
+        <div class="frame">
+            <form class="form-signin" action="" method="post" name="form">
+                <h2 class="form-signin-heading">Передайте нам Ваши контакты!</h2>
+                <label for="username">Фамилия</label>
+                <input class="form-styling" type="text" id="username" placeholder="" />
+                <label for="password">Имя</label>
+                <input class="form-styling" type="text" id="password" placeholder="" />
+                <input type="checkbox" id="checkbox" />
+                <label for="checkbox"><span class="ui"></span>Придете ли вы на мероприятие?</label>
+                <div class="btn-animate">
+                    <a class="btn-signin">Отправить</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+<footer>
+    <p>Оп, пасхалочка :)</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+<!--<script type="text/javascript" th:src="@{landing.js}"></script>-->
+</body>
+</html>

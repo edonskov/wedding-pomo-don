@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/graph.css}"/>
+</head>
+<body>
+    <section class="dashboard" id="main-column">
+        <div id="about">
+            <h1> <span> Monitoring System</span></h1>
+            <p>This system will be used as DEMO.</p>
+        </div>
+        <div id="sensorValues">
+            <div class="sensor-values">
+                <div class="volts">12.0</div>
+                <label>Volts</label>
+            </div>
+            <div class="sensor-values">
+                <div class="amps">0.7</div>
+                <label>Amps</label>
+            </div>
+            <div class="sensor-values">
+                <div class="moisture">1</div>
+                <label>Moisture</label>
+            </div>
+        </div>
+        <div id="sensorData1"></div>
+        <div id="sensorData2"></div>
+        <div id="sensorData3"></div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/4.2.1/highcharts.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4579/darkThemeHighCharts.js"></script>
+    <script type="text/javascript" th:src="@{graph.js}"></script>
+</body>
+</html>
