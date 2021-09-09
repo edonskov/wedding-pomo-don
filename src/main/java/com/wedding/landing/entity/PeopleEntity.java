@@ -1,6 +1,7 @@
 package com.wedding.landing.entity;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -14,8 +15,9 @@ public class PeopleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message = "Name is mandatory")
-    private String first_name;
+    private String firstName;
     @NotBlank(message = "Surname is mandatory")
-    private String last_name;
+    private String lastName;
+    private Boolean isComing;
     private LocalDateTime updatedTime;
 }

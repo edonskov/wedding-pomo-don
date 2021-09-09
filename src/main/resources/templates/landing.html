@@ -37,17 +37,15 @@
     </section>
     <section class="container">
         <div class="frame">
-            <form class="form-signin" action="" method="post" name="form">
+            <form class="form-signin" action="#" th:action="@{/adduser}" th:object="${peopleEntity}" th:method="post">
                 <h2 class="form-signin-heading">Передайте нам Ваши контакты!</h2>
-                <label for="username">Фамилия</label>
-                <input class="form-styling" type="text" id="username" placeholder="" />
-                <label for="password">Имя</label>
-                <input class="form-styling" type="text" id="password" placeholder="" />
-                <input type="checkbox" id="checkbox" />
-                <label for="checkbox"><span class="ui"></span>Придете ли вы на мероприятие?</label>
-                <div class="btn-animate">
-                    <a class="btn-signin">Отправить</a>
-                </div>
+                <label for="firstName">Фамилия</label>
+                <input class="form-styling" type="text" th:field="*{firstName}" id="firstName" placeholder="First_name" />
+                <label for="lastName">Имя</label>
+                <input class="form-styling" type="text" th:field="*{lastName}" id="lastName" placeholder="Last_name" />
+                <input type="checkbox" id="isComing" th:field="*{isComing}" checked="true"/>
+                <label for="isComing"><span class="ui"></span>Придете ли вы на мероприятие?</label>
+                <input type="submit" class="btn-animate" />
             </form>
         </div>
     </section>
