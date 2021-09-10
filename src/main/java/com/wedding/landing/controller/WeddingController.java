@@ -20,7 +20,7 @@ public class WeddingController {
 
     @GetMapping("/index")
     public String showUserList(PeopleEntity peopleEntity, Model model) {
-        boolean isComingTemp = true;
+        boolean isComingTemp = false;
         model.addAttribute("isComingTemp", isComingTemp);
         return "landing";
     }
@@ -41,11 +41,12 @@ public class WeddingController {
         return "success";
     }
 
-//    @GetMapping("/signup")
-//    public String showSignUpForm(PeopleEntity peopleEntity) {
-//        return "add-user";
-//    }
-//
+    @GetMapping("/statistics")
+    public String showStatistics(Model model) {
+        model.addAttribute("users", weddingRepository.findAll());
+        return "index";
+    }
+
 //    @GetMapping("/edit/{id}")
 //    public String showUpdateForm(@PathVariable("id") long id, Model model) {
 //        PeopleEntity user = weddingRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));

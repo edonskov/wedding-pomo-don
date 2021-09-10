@@ -18,6 +18,8 @@ public class PeopleEntity {
     private String firstName;
     @NotBlank(message = "Surname is mandatory")
     private String lastName;
-    private Boolean isComing;
+    @NotBlank(message = "Email is mandatory")
+    private String email;
+    private Boolean isComing = true;
     private LocalDateTime updatedTime;
 }

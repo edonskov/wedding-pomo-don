@@ -13,7 +13,7 @@
 <body>
 <header>
     <div id="hero-text">
-        <h1>Отправляйтесь с нами!</h1>
+        <h1>Виртуальное приглашение!</h1>
     </div>
     <div class="particle particle-1"> </div>
     <div class="particle particle-2"></div>
@@ -24,35 +24,37 @@
 <div id="content">
     <section class="info">
         <p>Помогалова Альбина и Донсков Евгений</p>
-        <p>Приглашают Вас отпраздновать любовное путешествие...</p>
-        <p>(Please stand by)</p>
+        <p>Приглашают Вас отпраздновать... </p>
+        <p>Что-то, о чем говорят в видео!</p>
+    </section>
+    <section class="infoVideo">
+        <iframe width="100%" height="100%" align="center" th:src="@{video.mp4}"></iframe>
     </section>
     <section class="transparent-text">
-        <img th:src="@{heart2.png}"/>
+        <img th:src="@{heart3.png}"/>
     </section>
     <section class="info">
         <p>ДАТА: 15.10.2021</p>
-        <p>МЕСТО: </p>
-        <p>(Please stand by)</p>
+        <p>МЕСТО: Санкт-Петербург</p>
+        <p>(Все подробности и время встречи будут сообщены позднее)</p>
     </section>
     <section class="container">
         <div class="frame">
             <form class="form-signin" action="#" th:action="@{/adduser}" th:object="${peopleEntity}" th:method="post">
-                <h2 class="form-signin-heading">Передайте нам Ваши контакты!</h2>
+                <h2 class="form-signin-heading">Сообщите, пожалуйста, о вашем решении!</h2>
                 <label for="firstName">Фамилия</label>
-                <input class="form-styling" type="text" th:field="*{firstName}" id="firstName" placeholder="First_name" />
+                <input class="form-styling" type="text" th:field="*{firstName}" id="firstName" placeholder="ФАМИЛИЯ" />
                 <label for="lastName">Имя</label>
-                <input class="form-styling" type="text" th:field="*{lastName}" id="lastName" placeholder="Last_name" />
-                <input type="checkbox" id="isComing" th:field="*{isComing}" checked="true"/>
+                <input class="form-styling" type="text" th:field="*{lastName}" id="lastName" placeholder="ИМЯ" />
+                <label for="email">Email</label>
+                <input class="form-styling" type="text" th:field="*{email}" id="email" placeholder="EMAIL" />
+                <input type="checkbox" id="isComing" th:field="*{isComing}" />
                 <label for="isComing"><span class="ui"></span>Придете ли вы на мероприятие?</label>
                 <input type="submit" class="btn-animate" />
             </form>
         </div>
     </section>
 </div>
-<footer>
-    <p>Оп, пасхалочка :)</p>
-</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
 <!--<script type="text/javascript" th:src="@{landing.js}"></script>-->
