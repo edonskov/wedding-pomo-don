@@ -4,150 +4,82 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: "Source Sans Pro", sans-serif;
-}
 
-#main-column {
+    background: #383838;
+    overflow-x: hidden;
+
+    font-size: 16px;
+    line-height: 20px;
+}
+#about {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     color: #cdcfce;
-}
-#main-column > div {
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
-    flex: 1 1 auto;
-}
-#main-column > #about {
     flex: 1 1 0;
-}
-#main-column > div#sensorValues {
-    flex: 1 1 0;
-}
-#main-column > div#sensorData1 {
-    flex: 2 1 0;
-    padding: 0;
-    margin: 0;
-}
-
-#main-column > div#sensorData2 {
-    flex: 2 1 0;
-    padding: 0;
-    margin: 0;
-}
-#main-column > div#sensorData3 {
-    flex: 2 1 0;
-    padding: 0;
-    margin: 0;
-}
-
-.dashboard > div {
     padding: 1rem;
 }
-.dashboard > div:nth-child(1) {
-    background: #333333;
+
+body.open {
+    overflow-y: hidden;
 }
-.dashboard > div:nth-child(2) {
-    background: #383838;
+
+.shop {
+    position: relative;
+    z-index: 5;
 }
-.dashboard > div:nth-child(3) {
-    background: #3d3d3d;
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 20px 0 20px 20px;
 }
-.dashboard > div h1, .dashboard > div h2 {
-    margin: 0 0 0.2rem 0;
+
+.products__item {
+    width: 290px;
 }
-.dashboard > div a {
-    text-decoration: none;
+
+.product {
+    background: #FFF;
+    padding: 30px 15px;
+    margin: 0 20px 20px 0;
+    border-radius: 5px;
+    text-align: center;
 }
-.dashboard > div a.mkr-link {
-    color: #2b908f;
+
+.product__title {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 0 15px 0;
 }
-.dashboard > div a.j5-link {
-    color: #ecdb43;
-}
-.dashboard > div p {
+
+.product__text {
     margin: 0;
 }
 
-div#about h1 span:nth-of-type(1) {
-    color: #2b908f;
-    font-weight: 400;
-}
-div#about h1 span:nth-of-type(2) {
-    color: #90ee7e;
+.button {
+    display: inline-block;
+    background: #39C;
+    padding: 5px 10px;
+    border-radius: 3px;
+
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: #FFF;
 }
 
-div#sensorValues {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.shop > div:nth-child(1) {
+    background: #333333;
 }
-div#sensorValues div.sensor-values {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    text-align: center;
+.shop > div:nth-child(2) {
+    background: #383838;
 }
-div#sensorValues div.sensor-values > div {
-    font-size: 2em;
-    font-weight: 200;
+.shop > div:nth-child(3) {
+    background: #3d3d3d;
 }
-div#sensorValues div.sensor-values > label {
-    font-size: 1.5em;
-}
-div#sensorValues div.sensor-values div.volts {
-    color: #2b908f;
-}
-div#sensorValues div.sensor-values div.amps {
-    color: #90ee7e;
-}
-div#sensorValues div.sensor-values div.moisture {
-    color: #f45b5b;
-}
-div#sensorValues div.sensor-values div.moisture span {
-    margin-right: 10px;
-    font-size: 0.4em;
-}
-
-@media screen and (max-width: 798px) {
-    div#about {
-        display: none;
-    }
-
-    div#sensorValues {
-        flex-direction: column;
-        font-size: 0.8em;
-        align-items: center;
-    }
-    div#sensorValues div.sensor-values {
-        flex-direction: row;
-        align-items: flex-end;
-    }
-    div#sensorValues div.sensor-values label {
-        margin-right: 10px;
-        margin-bottom: 3px;
-    }
-}
-@media screen and (max-height: 430px) {
-    div#about {
-        display: none;
-    }
-
-    div#sensorValues {
-        flex-direction: row;
-        font-size: 0.5em;
-    }
-    div#sensorValues div.sensor-values > label {
-        font-size: 1em;
-    }
-}
-
 
 
 .navigation {

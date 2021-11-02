@@ -22,7 +22,14 @@ public class WeddingController {
     public String showUserList(PeopleEntity peopleEntity, Model model) {
         boolean isComingTemp = false;
         model.addAttribute("isComingTemp", isComingTemp);
-        return "landing";
+        return "graph";
+    }
+
+    @GetMapping("/index2")
+    public String showUserList2(PeopleEntity peopleEntity, Model model) {
+        boolean isComingTemp = false;
+        model.addAttribute("isComingTemp", isComingTemp);
+        return "listOfMashines";
     }
 
     @PostMapping("/adduser")
